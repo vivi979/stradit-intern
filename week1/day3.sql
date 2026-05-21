@@ -1,4 +1,4 @@
-create database company_db
+create database company_db;
 use company_db;
 
 show databases;
@@ -95,3 +95,15 @@ select * from employees where employee_name like '%n';
 -- 18 employees whose salary is between: 40000 and 70000
 
 select * from employees where salary between 40000 and 70000;
+
+-- 19. Employees hired after specific date
+
+select * from employees where joining_date = '2026-12-17';
+
+-- 20. Top 3 salaries
+
+insert into employees values
+(14,'savita','it',900000,'2026-09-25'),
+(15,'nana','marketing',880000,'2025-12-20');
+
+select * from employees order by salary desc limit 3;
