@@ -5,7 +5,7 @@ show databases;
 
 -- 1. Create Employee Table Task Create a table named employees with columns:id,name,department,salary
 
-create table Employee
+create table Employee1
 (
 id Int primary key,
 ename varchar(20) not null,
