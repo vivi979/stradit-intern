@@ -1,0 +1,98 @@
+Subject: Weekly Progress Report
+Dear Toshak,
+I hope you are doing well. Please find below my weekly progress report.
+
+Day 1: Python Fundamentals
+Topics Covered:
+
+Understanding Python syntax, indentation, and code structure (important for readability and execution)
+Working with variables and data types such as int, float, string, boolean
+Use of operators (arithmetic, comparison, logical) in expressions
+Implementation of control flow statements like if-else conditions and loops (for, while)
+Introduction to functions and reusable code blocks
+
+Tasks Completed:
+
+Wrote basic Python programs using input/output functions (print, input)
+Implemented logic using conditional statements and loops
+Solved beginner-level problems focused on decision making and iteration
+
+
+Day 2: Python Data Structures
+Topics Covered:
+
+Detailed study of Lists (ordered, mutable) and operations like append, insert, remove
+Understanding Tuples (ordered, immutable) and use cases
+Use of Sets (unordered, unique elements) for removing duplicates
+Working with Dictionaries (key-value pairs) and operations like keys(), values(), items()
+Concept of Comprehensions (List & Dictionary) for writing optimized and concise code
+Difference between mutable vs immutable data types
+
+Tasks Completed:
+
+Solved coding problems involving data structure manipulation
+Implemented searching, updating, and iteration over collections
+Used comprehensions to optimize solutions and reduce code length
+
+
+Day 3: SQL Basics
+Topics Covered:
+
+Understanding CRUD operations (Create, Read, Update, Delete) using SQL statements
+Learning TCL commands (COMMIT, ROLLBACK, SAVEPOINT) for transaction management
+Basics of Entity Relationship (ER) model and Relational Databases
+Use of SQL clauses such as WHERE, GROUP BY, ORDER BY, HAVING
+Understanding keys (Primary Key, Foreign Key) and table relationships
+
+Tasks Completed:
+
+Wrote SQL queries using SELECT, INSERT, UPDATE, DELETE operations
+Performed filtering using WHERE conditions and logical operators
+Practiced aggregation using GROUP BY and HAVING clauses
+Executed queries to understand data retrieval and manipulation
+
+
+Day 4: Data Analysis Libraries (NumPy, Pandas, Matplotlib, Seaborn)
+Topics Covered:
+
+Working with NumPy arrays for efficient numerical computations
+Using Pandas DataFrames and Series for structured data handling
+Performing data cleaning, filtering, and transformation in Pandas
+Creating visualizations using Matplotlib (line, bar, histogram plots)
+Advanced visualization with Seaborn (heatmaps, distribution plots, pairplots)
+
+Tasks Completed:
+
+Solved practical problems using NumPy and Pandas operations
+Performed data preprocessing and analysis
+Created visual graphs and charts to represent data insights
+
+
+Day 5: SQL Joins
+Topics Covered:
+
+Understanding INNER JOIN for matching records between tables
+Use of LEFT JOIN to retrieve all records from left table
+Use of RIGHT JOIN to retrieve all records from right table
+Learning FULL JOIN to combine results from both tables
+Concept of table relationships and ON clause conditions
+
+Tasks Completed:
+
+Wrote SQL queries using different JOIN operations
+Combined multiple tables using keys and join conditions
+Practiced real-world scenarios involving data merging and relational queries
+
+
+Summary:
+
+Built strong foundation in Python programming (fundamentals + data structures)
+Gained practical experience in SQL (CRUD operations, clauses, joins)
+Developed skills in data analysis and visualization using modern libraries
+Improved problem-solving ability through hands-on coding and query practice
+
+
+Please let me know if you need any further details.
+Thank you.
+Best regards,
+Vaishnavi Walekar
