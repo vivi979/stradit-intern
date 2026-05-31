@@ -144,5 +144,3 @@ from employee1 e
 left join departments d
 on e.dept_id = d.dept_id
 where d.dept_id is NULL;
-
--- 25. 
