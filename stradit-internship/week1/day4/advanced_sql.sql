@@ -232,7 +232,7 @@ call add_employee(1,'Amit Sharma','IT',50000);
 
 call add_employee(2,'Priya Patel','HR',-10000);
 
-select * from employees;
+select * from employees1;
 
 -- Task 35 : Transaction Management
 
@@ -246,20 +246,19 @@ insert into accounts values
 (101,'Amit Sharma',50000),
 (102,'Priya Patel',30000);
 
-# deduct balance from one account
+-- deduct balance from one account
 
 start transaction;
 update accounts
 set balance = balance - 10000
 where account_id = 101;
 
-# add balance to another account
+-- add balance to another account
 
 update accounts
 set balance = balance + 10000
 where account_id = 102;
 commit;
-
 
 
 

@@ -13,24 +13,24 @@ department varchar(20) not null,
 salary Int not null
 );
 
-select * from Employee;
+select * from Employee1;
 
 -- 2. Insert Data into Table Task: Insert at least 5 employee records into the employees table.
 
-insert into Employee values(1,'neha','hr',60000);
-insert into Employee values(2,'sakshi','marketing',70000);
-insert into Employee values(3,'ankita','sales',80000);
-insert into Employee values(4,'ekta','finance',55000);
-insert into Employee values(5,'pramod','it',40000);
+insert into Employee1 values(1,'neha','hr',60000);
+insert into Employee1 values(2,'sakshi','marketing',70000);
+insert into Employee1 values(3,'ankita','sales',80000);
+insert into Employee1 values(4,'ekta','finance',55000);
+insert into Employee1 values(5,'pramod','it',40000);
 
 -- 3.3. Fetch All Records Task: Write a query to display all employee records.
 
-select * from Employee;
+select * from Employee1;
 
 -- 4. Fetch Specific Columns Task: Display only: employee name,department from the employees table.
 
-select ename, department from Employee ;
+select ename, department from Employee1 ;
 
 -- 5. Filter Data using WHERE Task: Display employees who belong to the IT department.
 
-select ename from Employee where department = 'it';
+select ename from Employee1 where department = 'it';

@@ -71,11 +71,11 @@ insert into uber_rides values
 (9,'Mumbai','Rahul',18.0,550),
 (10,'Mumbai','Amit',14.0,420);
 
-# Average Trip Distance
+-- Average Trip Distance
 select avg(trip_distance) as average_trip_distance
 from uber_rides;
 
-# Busiest City
+-- Busiest City
 select city,
        count(*) as total_rides
 from uber_rides
@@ -83,7 +83,7 @@ group by city
 order by total_rides desc
 limit 1;
 
-# Highest Earning Driver
+-- Highest Earning Driver
 select driver_name,
        sum(fare_amount) as total_earnings
 from uber_rides
@@ -113,7 +113,7 @@ insert into amazon_orders values
 (9,'Arjun','Laptop',2,110000),
 (10,'Priya','Headphones',2,4000);
 
-# Top Customers
+-- Top Customers
 
 select
     customer_name,
@@ -123,7 +123,7 @@ group by customer_name
 order by total_spent desc
 limit 5;
 
-# Repeat Customers
+-- Repeat Customers
 
 select
     customer_name,
@@ -132,7 +132,7 @@ from amazon_orders
 group by customer_name
 having count(order_id) > 1;
 
-# Highest Revenue Products
+-- Highest Revenue Products
 
 select
     product_name,
@@ -162,12 +162,12 @@ insert into transactions values
 (9,105,'2025-01-10 13:00:00',175000),
 (10,105,'2025-01-10 13:00:40',25000);
 
-# Transactions Greater Than ₹1 Lakh
+-- Transactions Greater Than ₹1 Lakh
 select *
 from transactions
 where amount > 100000;
 
-# Multiple Transactions Within 1 Minute
+-- Multiple Transactions Within 1 Minute
 select
     t1.account_id,
     t1.transaction_id,
@@ -204,7 +204,7 @@ insert into hospital values
 (9,'Vikas','Dr. Sharma','2025-03-10',109),
 (10,'Anjali','Dr. Mehta','2025-03-15',110);
 
-# doctors with most patients
+-- doctors with most patients
 select
     doctor_name,
     count(patient_id) as total_patients
@@ -212,12 +212,12 @@ from hospital
 group by doctor_name
 order by total_patients desc;
 
-# Available Beds
+-- Available Beds
 select
     120 - count(distinct bed_no) as available_beds -- assume hospital has 120 beds
 from hospital;
 
-# monthly patient count
+-- monthly patient count
 select
     monthname(admission_date) as month,
     count(patient_id) as patient_count
@@ -225,4 +225,3 @@ from hospital
 group by month(admission_date),
          monthname(admission_date)
 order by month(admission_date);
-

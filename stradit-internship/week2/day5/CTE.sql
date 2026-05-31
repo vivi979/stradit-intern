@@ -14,13 +14,13 @@ insert into employees values
 (2,'Amit','HR',45000),
 (3,'Sneha','Finance',70000);
 
-#Create a CTE for employees earning above ₹50,000
+--Create a CTE for employees earning above ₹50,000
 with high_salary as (
     select *
     from employees
     where salary > 50000
 )
-# Display filtered employee details
+-- Display filtered employee details
 select * from high_salary;
 
 -- Task 2 : Department-wise Average Salary

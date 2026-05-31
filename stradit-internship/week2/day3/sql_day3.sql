@@ -112,4 +112,3 @@ insert into employees1 values
 (100, 'tamanna', 'marketing', 'female', 62000, 4);
 
 select salary, department from employees1;
-

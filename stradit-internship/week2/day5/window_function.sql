@@ -16,7 +16,7 @@ INSERT INTO employees3 (emp_id, emp_name, department, joining_date) VALUES
 
 -- Assign row numbers department-wise
 
-select * , row_number() over (partition by department) as row_num from employees3;
+select * , row_number() over (partition by department order by emp_id) as row_num from employees3;
 
 -- Sort employees by joining date
 
@@ -39,7 +39,7 @@ INSERT INTO employee_salary (emp_id, emp_name, department, salary) VALUES
 
 -- Rank employees department-wise
 
-select * , rank() over (partition by department) as dept_rank from employee_salary;
+select * , rank() over (partition by department order by salary desc) as dept_rank from employee_salary;
 
 -- Handle salary ties correctly
 
@@ -266,7 +266,7 @@ INSERT INTO orders (customer_id, order_date, product) VALUES
 (6, '2025-01-10', 'Charger'),
 (1, '2025-01-07', 'Keyboard');
 
-# Find first purchased product for every customer
+-- Find first purchased product for every customer
 
 select *,
 first_value(product) over (partition by customer_id order by order_date) as first_purchased from orders;
@@ -294,7 +294,7 @@ INSERT INTO customer_orders (customer_id, order_date, product) VALUES
 (5, '2025-01-05', 'Monitor'),
 (5, '2025-01-09', 'Keyboard');
 
-# Identify latest purchased product
+-- Identify latest purchased product
 
 select *,
 last_value(product) 
@@ -324,14 +324,14 @@ INSERT INTO transactions (txn_id, account_no, amount) VALUES
 (12, 'A106', 8800),
 (13, 'A107', 7000);
 
-# Identify duplicate records
+-- Identify duplicate records
 
 select *,
 row_number()
 over (partition by account_no) as duplicate_record
 from transactions;
 
-# Keep only latest entry
+-- Keep only latest entry
 select * from (
 select *,
 row_number() over (partition by account_no order by txn_id desc) as latest_entry
@@ -357,7 +357,7 @@ insert into employees2 values
 ('Rohan','Sales',80000),
 ('Kavita','Sales',85000);
 
-# rank salaries
+-- rank salaries
 
 select *,
     rank() over(
@@ -366,7 +366,7 @@ select *,
     ) as salary_rank
 from employees2;
 
-# Extract highest salary employee
+-- Extract highest salary employee
 
 select emp_name,
        department,
@@ -402,7 +402,7 @@ insert into logins values
 (3,'2025-01-11'),
 (3,'2025-01-12');
 
-# Compare current login with previous login
+-- Compare current login with previous login
 select
     user_id,
     login_date,
@@ -412,7 +412,7 @@ select
     ) as previous_login
 from logins;
 
-# Identify consecutive login streaks
+-- Identify consecutive login streaks
 select
     user_id,
     login_date,
@@ -447,7 +447,7 @@ insert into monthly_sales values
 ('May',18000),
 ('Jun',16000);
 
-# Compare month-over-month sales
+-- Compare month-over-month sales
 select
     month_name,
     sales,
@@ -463,7 +463,7 @@ select
     ) as previous_month_sales
 from monthly_sales;
 
-# Identify growth and decline
+-- Identify growth and decline
 select
     month_name,
     sales,
@@ -507,7 +507,7 @@ select
     end as trend
 from monthly_sales;
 
-# Task 15. Hospital Patient Visit Tracking
+-- Task 15. Hospital Patient Visit Tracking
 create table visits (
     patient_id int,
     visit_date date
@@ -522,7 +522,7 @@ insert into visits values
 (103,'2025-02-01'),
 (103,'2025-02-15');
 
-#Assign visit sequence numbers
+--Assign visit sequence numbers
 select
     patient_id,
     visit_date,
@@ -532,7 +532,7 @@ select
     ) as visit_sequence
 from visits;
 
-#Calculate days between visits
+--Calculate days between visits
 select
     patient_id,
     visit_date,
